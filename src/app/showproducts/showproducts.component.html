@@ -1,0 +1,120 @@
+
+<p>
+  showproducts works!
+</p>
+<mat-grid-list cols="4" class="grid" >
+ 
+ 
+  <div *ngFor="let Product of Products">
+    <mat-grid-tile >
+      <ul>
+     <img class="img-circle" src={{Product.image}} width="60" height="60">
+  
+     <div>
+     <span>{{Product.name}}</span> 
+    </div>
+     <button (click)="additems()" mat-button>Add</button>
+ 
+    </ul>
+    </mat-grid-tile>
+  </div>  
+
+<!--
+  <div>
+      <mat-grid-tile>
+        <ul>
+       <img class="img-circle" src="https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg" width="30" height="30">
+       <li>price</li>
+       <button mat-button>Add</button>
+      </ul>
+      </mat-grid-tile>
+    </div>  
+
+    <div>
+        <mat-grid-tile>
+          <ul>
+       <img class="img-circle" src="https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg" width="30" height="30">
+         <li>price</li>
+         <button mat-button>Add</button>
+        </ul>
+        </mat-grid-tile>
+      </div>  
+
+      <div>
+          <mat-grid-tile>
+            <ul>
+           <img class="img-circle" src="https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg" width="30" height="30">
+           <li>price</li>
+           <button mat-button>Add</button>
+          </ul>
+          </mat-grid-tile>
+        </div>  
+
+
+        <div>
+            <mat-grid-tile>
+              <ul>
+             <img class="img-circle" src="https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg" width="50" height="50">
+             <li>price</li>
+             <button mat-button>Add</button>
+            </ul>
+            </mat-grid-tile>
+          </div>  
+          <div>
+              <mat-grid-tile>
+                <ul>
+              <img class="img-circle" src="https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg" width="50" height="50">
+               <li>price</li>
+               <button mat-button>Add</button>
+              </ul>
+              </mat-grid-tile>
+            </div>  
+            <div>
+                <mat-grid-tile>
+                  <ul>
+                 <img class="img-circle" src="https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg" width="50" height="50">
+                 <li>price</li>
+                 <button mat-button>Add</button>
+                </ul>
+                </mat-grid-tile>
+              </div>  
+              <div>
+                  <mat-grid-tile>
+                    <ul>
+                   <img class="img-circle" src="https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg" width="50" height="50">
+                   <li>price</li>
+                   <button mat-button>Add</button>
+                  </ul>
+                  </mat-grid-tile>
+                </div>  
+
+
+
+                <div>
+                    <mat-grid-tile>
+                      <ul>
+                    <img class="img-circle" src="https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg" width="50" height="50">
+                     <li>price</li>
+                     <button mat-button>Add</button>
+                    </ul>
+                    </mat-grid-tile>
+                  </div>  
+                  <div>
+                      <mat-grid-tile>
+                        <ul>
+                       <img class="img-circle" src="https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg" width="50" height="50">
+                       <li>price</li>
+                       <button mat-button>Add</button>
+                      </ul>
+                      </mat-grid-tile>
+                    </div>  
+                    <div>
+                        <mat-grid-tile>
+                          <ul>
+                         <img class="img-circle" src="https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg" width="50" height="50">
+                         <li>price</li>
+                         <button mat-button>Add</button>
+                        </ul>
+                        </mat-grid-tile>
+                      </div>   -->
+    </mat-grid-list>
