@@ -1,3 +1,44 @@
-<p>
-  pricedetails works!
-</p>
+<div class="price">
+<h2>Price Details</h2>
+
+</div>
+
+
+<!--price datails table-->
+<div>
+ <mat-table  #table [dataSource]="dataSource">
+    
+  <ng-container matColumnDef="productname">
+           <mat-header-cell *matHeaderCellDef>Product Name</mat-header-cell>
+            <mat-cell *matCellDef="let Order">{{Order.productname}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="quantity">
+    <mat-header-cell *matHeaderCellDef>Quantity</mat-header-cell>
+     <mat-cell *matCellDef="let Order">{{Order.quantity}}</mat-cell>
+</ng-container>
+
+
+<ng-container matColumnDef="price">
+  <mat-header-cell *matHeaderCellDef>Price</mat-header-cell>
+   <mat-cell *matCellDef="let Order">{{Order.price}}</mat-cell>
+</ng-container>
+
+   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row> 
+   <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+
+
+ </mat-table>
+
+
+</div>
+
+
+
+<!--footer-->
+
+<div class="total">
+  TOTAL AMOUNT
+</div>
+

@@ -1,11 +1,20 @@
 
-<div >
+<div  class="nav" >
   
-<mat-toolbar-row color="primary">
+<mat-toolbar-row  >
 
-<button mat-button fxFlex="31%" >Menu</button>
-<button mat-button fxFlex="31%" >Category</button>
-<button mat-button fxFlex="35%" >Signup/Login</button>
+<button mat-button class="dropbtn" fxFlex="31%" >MENU</button>
+
+<div class="dropdown">
+    <button  mat-button class="dropbtn">CATEGORY</button>
+    <div class="dropdown-content">
+      <a href="#">Food</a>
+      <a href="#">Drinks</a>
+      <a href="#">Stationary</a>
+    </div>
+  </div>
+
+<button mat-button class="dropbtn" fxFlex="35%" >Signup/Login</button>
 
 </mat-toolbar-row>
 </div>

@@ -14,6 +14,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 //importing Flex for the CSS
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -23,7 +24,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     NavbarComponent,
     ShowproductsComponent,
     SignupComponent,
-    PricedetailsComponent
+    PricedetailsComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

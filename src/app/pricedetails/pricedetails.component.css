@@ -1,0 +1,14 @@
+.price{
+   position: relative;
+   align-self: center;
+   border: 2px;
+   border-color: black;
+
+}
+
+
+.total{
+    
+    text-align:left;
+    font-weight: bold;
+}

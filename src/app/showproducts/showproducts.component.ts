@@ -31,16 +31,6 @@ export class ShowproductsComponent implements OnInit {
       image:"https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg",
       name: 'Work',
       updated: new Date('1/28/16'),
-    },
-    {
-      image:"https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg",
-      name: 'Work',
-      updated: new Date('1/28/16'),
-    },
-    {
-      image:"https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg",
-      name: 'Work',
-      updated: new Date('1/28/16'),
     }
   ];
 

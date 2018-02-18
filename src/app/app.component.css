@@ -7,3 +7,7 @@
     background-color: darkgrey;
 }
 
+.footer{
+    position:fixed;bottom:0px;width:100%;
+    background-color: rgb(41, 38, 38);
+}
