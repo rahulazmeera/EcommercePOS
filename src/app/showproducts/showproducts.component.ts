@@ -9,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./showproducts.component.css']
 })
 export class ShowproductsComponent implements OnInit {
+     
+    productname: any;
+    Quantity: String;
+    price: string;
    
+   
+
+
 
   Products = [
     {
@@ -32,6 +39,8 @@ export class ShowproductsComponent implements OnInit {
       name: 'Work',
       updated: new Date('1/28/16'),
     }
+   
+    
   ];
 
 
@@ -46,15 +55,14 @@ export class ShowproductsComponent implements OnInit {
 
   additems(){
       
-
       
+     console.log("button is clicked");
 
+
+    
+     alert("item added successfully")
      
     
-     console.log("button is clicked");
-     alert("item added successfully")
-
-     
 
 
 

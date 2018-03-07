@@ -2,21 +2,33 @@
 <h2>Name Of the Category</h2>
  
 
-<mat-grid-list cols="4" class="grid" >
- 
- 
+
+<mat-card >
+
+
+
+  <mat-grid-list cols="4" class="grid" >
+
   <div *ngFor="let Product of Products">
     <mat-grid-tile >
       <ul>
      <img class="img-circle" src={{Product.image}} width="60" height="60">
   
-     <div>
-     <span>{{Product.name}}</span> 
-    </div>
+     <div >
+     <span id="pro">{{Product.name}}+rahul</span> 
+       </div>
+
      <button (click)="additems()" mat-button>Add</button>
- 
+
     </ul>
+
     </mat-grid-tile>
-  </div>  
+
+     </div>  
 
     </mat-grid-list>
+
+
+
+  </mat-card>
+

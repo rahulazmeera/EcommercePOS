@@ -11,4 +11,6 @@
     
     text-align:left;
     font-weight: bold;
+    position: absolute;
+    bottom: 10px;
 }

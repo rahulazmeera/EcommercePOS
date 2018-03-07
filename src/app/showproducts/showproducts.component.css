@@ -5,4 +5,5 @@
 
 .grid{
 overflow: auto;
+overflow-y: scroll;
 }
