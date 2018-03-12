@@ -44,6 +44,17 @@
 <div class="total">
     TOTAL AMOUNT = 200 $
   </div>
+
+  <div>
+    <p (notify)="onNotifyClicked($event)"> Heyyyyyyyyy+ {{showMessage}}</p>
+   
+  </div>
+
+ <div >
+  <button class="pay" (click)="getItems()" mat-button>Confirm PAY</button>
+ </div>
+
+
 </mat-card>
 
 

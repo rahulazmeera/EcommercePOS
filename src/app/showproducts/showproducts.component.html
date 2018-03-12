@@ -1,6 +1,7 @@
-
-<h2>Name Of the Category</h2>
+<div>
+<h2>Name Of the Category       <button (click)="cartclick()" style="background-color: yellow">cart: {{count}}</button></h2> 
  
+</div>
 
 
 <mat-card >
@@ -14,12 +15,13 @@
       <ul>
      <img class="img-circle" src={{Product.image}} width="60" height="60">
   
-     <div >
-     <span id="pro">{{Product.name}}+rahul</span> 
-       </div>
+      <div>
+     <span id="pro">Name: {{Product.name}}</span> 
+      </div>
+      <p id="pro">Price: {{Product.price}} $</p>
 
-     <button (click)="additems()" mat-button>Add</button>
-
+     <button (click)="additems(Product)" mat-button>Add</button>
+     <button (click)="removeitems(Product)" mat-button>remove</button>
     </ul>
 
     </mat-grid-tile>

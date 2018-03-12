@@ -15,7 +15,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 //importing Flex for the CSS
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { AdminComponent } from './admin/admin.component';
-
+import { AdditemsService } from './services/additems.service';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -31,9 +32,10 @@ import { AdminComponent } from './admin/admin.component';
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [AdditemsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
