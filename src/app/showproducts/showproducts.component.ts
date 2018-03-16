@@ -103,7 +103,7 @@ export class ShowproductsComponent implements OnInit {
   
 cartclick(){
     //it should display the list of item names
-
+/*
  if(this.cart.length<=0){
     alert("No items available")
   }else{
@@ -123,14 +123,18 @@ cartclick(){
 
       //console.log("clickeddd mee")
         });
-     
-    }
+         }
+*/
+    var k= JSON.stringify(this.cart)
+
+     alert(k)
+   
      
     
+      }
 
 
 
-                         }
 
 removeitems(){
   

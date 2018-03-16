@@ -8,50 +8,45 @@
 <!--price datails table-->
 <mat-card style="height:100%;">
 
-<div>
- <mat-table  #table [dataSource]="dataSource">
+  <div >
+   <table >
+      <tr>
+        <th>ProductName</th>
+        <th>Price</th>
+        <th>quantity</th>
+        <th>+</th>
+        <th>X</th>
+      </tr>
+
+      <tr *ngFor="let item of items">
+        <td>{{item.productname}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.quantity}}</td>
+        <td><button >+</button></td>
+        <td><button >-</button></td>
+      </tr>
     
-  <ng-container matColumnDef="productname">
-           <mat-header-cell *matHeaderCellDef>Product Name</mat-header-cell>
-            <mat-cell *matCellDef="let Order">{{Order.productname}}</mat-cell>
-  </ng-container>
+    </table>
+  </div>
 
-  <ng-container matColumnDef="quantity">
-    <mat-header-cell *matHeaderCellDef>Quantity</mat-header-cell>
-     <mat-cell *matCellDef="let Order">{{Order.quantity}}</mat-cell>
-</ng-container>
-
-
-<ng-container matColumnDef="price">
-  <mat-header-cell *matHeaderCellDef>Price</mat-header-cell>
-   <mat-cell *matCellDef="let Order">{{Order.price}}</mat-cell>
-</ng-container>
-
-   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row> 
-   <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  
 
 
 
- </mat-table>
 
 
-</div>
 
 
 
 <!--footer-->
 
-<div class="total">
-    TOTAL AMOUNT = 200 $
+<div class="total" >
+    TOTAL AMOUNT = {{this.totalPrice()}} $
   </div>
 
-  <div>
-    <p (notify)="onNotifyClicked($event)"> Heyyyyyyyyy+ {{showMessage}}</p>
-   
-  </div>
 
  <div >
-  <button class="pay" (click)="getItems()" mat-button>Confirm PAY</button>
+  <button class="pay" (click)="totalPrice(); PlaceOrder();"  mat-button>Confirm PAY</button>
  </div>
 
 

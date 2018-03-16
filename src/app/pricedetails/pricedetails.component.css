@@ -25,3 +25,19 @@
     bottom: 10px;
     
 } 
+
+
+th{
+  width: 100px;
+  color: rgba(5, 46, 49, 0.74);
+
+}
+
+.tablerow{
+    width: 100px
+}
+td{
+    width: 100px;
+    color: white;
+    height: 30px;
+  }
