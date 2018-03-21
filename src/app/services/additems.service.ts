@@ -19,5 +19,32 @@ export class AdditemsService {
 
 
 
+   //This will insert the new items list into the DB 
+
+   addMoreItems(){
+     //post request to add items 
+
+   }
+
+
+   deleteItems(){
+     //delete request 
+   }
+
+
+  ChangeQuantityOfItems(){
+    //patch request just to chnage the  Available quantity of the item
+    
+  }
+
+
+  UpdateInventoryAfterPlaceOrder(){
+  //again update the Order qunatity after order is placed
+  //reduce the qunatity of the items
+
+  }
+  
+  
+
 
 }
