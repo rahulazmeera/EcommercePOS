@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, HttpModule } from '@angular/http';
 import { Subject } from 'rxjs/Subject';
+import 'rxjs/add/operator/map';
 
 
 @Injectable()
@@ -8,13 +9,13 @@ export class OrderService {
 
   constructor(private http: Http) { }
 
-  public newOrderSubject = new Subject<any>();
+  //public newOrderSubject = new Subject<any>();
   
  
   placeOrder(body:any){
     //change the URL and the BODY 
-    this.http.post('http://jsonplaceholder.typicode.com/posts', body)
-      .subscribe(
+    this.http.post('http://localhost:3000/placeorder', body)
+      .map(
         res => {
           console.log(res);
         },
@@ -30,9 +31,10 @@ export class OrderService {
   getALLOrders(){
 
     //change the URL
-    this.http.get('https://api.github.com/users/seeschweiler').subscribe(data => {
-      console.log(data);
+    this.http.get('http://loacalhost:3000/placeorder').map(data => {
+      return data;
     });
+
   }
 
 

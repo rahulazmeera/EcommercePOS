@@ -5,7 +5,13 @@ import {ShowproductsComponent} from '../showproducts/showproducts.component';
 //import {DataSource } from '@angular/cdk/collections';
 
 import { AdditemsService } from './../services/additems.service';
-import { Http } from '@angular/http';
+//import placeorder services 
+import { OrderService} from './../services/order.service'
+
+
+import { Http} from '@angular/http';
+import { HttpHeaders } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-pricedetails',
@@ -52,8 +58,7 @@ export class PricedetailsComponent implements OnInit {
 
 
   constructor( private http: Http,
-              private additemsService: AdditemsService
-            ) { 
+              private additemsService: AdditemsService) { 
    
  
   }  
@@ -84,12 +89,30 @@ export class PricedetailsComponent implements OnInit {
    // console.log(this._productComponent.cart[0]);
     this.totalamount=this.totalPrice();
     var tt={ "Totalprice":this.totalamount}
-    this.a.push(tt);
-
+   // this.a.push(tt);
+  
     var l=JSON.stringify(this.a);
     console.log(JSON.stringify(this.a))
     
+    
+    
+
+
     console.log("Setting the array to zero")
+
+    
+  
+    if(this.a.length>0){
+      this.PlaceOrders();
+    }else{
+      console.log("No items in the cart")
+      alert("please add some items in the cart to place order")
+    }
+ 
+
+     console.log("Array length caliculated here"+"  "+this.a.length)
+
+
     this.a.length = 0;
      //to parse body into a request
     
@@ -97,8 +120,10 @@ export class PricedetailsComponent implements OnInit {
     //return this.http.post('/api/food/', body, httpOptions);
    
    // console.log("place order"+obj)
+    console.log("getting orders list after placing the order+++++++++++========-_______+=+++++______=++++----+++")
+    this.getOrdersList();
+  
 
-   
   }
 
    
@@ -129,6 +154,47 @@ return total;
 
 
 }
+
+
+getOrdersList(){
+
+  
+  this.http.get('http://localhost:3000/placeorders').subscribe(data => {
+    console.log(data); // using the HttpClient instance, http to call the API then subscribe to the data and display to console
+  });
+
+ 
+}
+
+
+
+PlaceOrders(){
+
+   this.totalamount=this.totalPrice();
+
+  this.http.post('http://localhost:3000/placeorders',{
+  	
+     "totalamount":this.totalamount,
+     "order":this.a
+      }
+ ).subscribe(res =>{
+     console.log(res);
+  },
+  err =>{
+    console.log('Error Occured')
+  }
+
+
+
+
+);
+   
+
+
+}
+
+
+
 
 
 
