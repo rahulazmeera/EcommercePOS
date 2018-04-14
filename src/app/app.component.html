@@ -1,28 +1,34 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   
-
  <div>
   <app-navbar> </app-navbar>
  </div>
 
 
-
- <div fxLayoutGap="10px">
-  
+ <!--
+<div fxLayoutGap="10px"> 
 <div fxFlex="70%" class="product">
   <app-showproducts> </app-showproducts>
-
 </div>
-
 
   <div fxFlex="30%" class="pricedetails">
       <app-pricedetails> </app-pricedetails>
  </div>
 
-  </div>
+  </div> 
+-->
+
+<div>
+  <router-outlet></router-outlet>
+</div>
 
 
-  <div class="footer">
+
+<div class="footer">
   <app-admin></app-admin>
 </div>
+
+
+
+

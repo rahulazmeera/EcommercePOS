@@ -29,6 +29,7 @@ export class PricedetailsComponent implements OnInit {
   itemprice= "2";
   a:any[]=[];
   
+  orderID:string;
 
 
   productname: string;
@@ -104,6 +105,7 @@ export class PricedetailsComponent implements OnInit {
   
     if(this.a.length>0){
       this.PlaceOrders();
+
     }else{
       console.log("No items in the cart")
       alert("please add some items in the cart to place order")
@@ -112,8 +114,14 @@ export class PricedetailsComponent implements OnInit {
 
      console.log("Array length caliculated here"+"  "+this.a.length)
 
+  if(this.a.length>0){
+    this.SendEmailNotification() 
+    }
 
+
+    if(this.a.length>0){
     this.a.length = 0;
+    }
      //to parse body into a request
     
 
@@ -121,12 +129,16 @@ export class PricedetailsComponent implements OnInit {
    
    // console.log("place order"+obj)
     console.log("getting orders list after placing the order+++++++++++========-_______+=+++++______=++++----+++")
+    if(this.a.length>0){
     this.getOrdersList();
-  
+     }
+
+   
+
 
   }
 
-   
+  
 
 
 onNotifyClicked(message: string){
@@ -171,14 +183,23 @@ getOrdersList(){
 PlaceOrders(){
 
    this.totalamount=this.totalPrice();
-
+    var ID;
+    this.orderID=JSON.stringify(ID);
+  
   this.http.post('http://localhost:3000/placeorders',{
   	
      "totalamount":this.totalamount,
      "order":this.a
       }
  ).subscribe(res =>{
-     console.log(res);
+     
+     console.log(res); 
+     var data=res.json();
+      this.orderID=data.Id;
+    
+     console.log("Your Order ID is"+this.orderID);
+     
+    
   },
   err =>{
     console.log('Error Occured')
@@ -194,6 +215,54 @@ PlaceOrders(){
 }
 
 
+
+
+SendEmailNotification(){
+
+console.log("expected Order ID"+this.orderID)
+
+  var k= JSON.stringify(this.a)
+   var orID=this.orderID
+   console.log(orID)
+
+  var txt;
+  var person = prompt(k, "email ID");
+  if (person == null || person == "") {
+      txt = "User cancelled the prompt.";
+  } else {
+      txt = "Hello " + person + "! How are you today?";
+  }
+
+  console.log("User Input Text goes here"+txt)
+
+  //calling email send service to send email notification
+  this.http.post('http://localhost:3000/emailNotification/emailnotification',{
+  	
+     "email":person,
+     "text":k,
+     "totalamount":this.totalamount,
+     "OrderID":orID,
+     "orderItems":k,
+     "status":"completed",
+      }
+ ).subscribe(res =>{
+     
+     console.log(res); 
+  },
+  err =>{
+    console.log('Error Occured')
+  }
+
+
+
+
+);
+
+
+
+  
+ 
+}
 
 
 

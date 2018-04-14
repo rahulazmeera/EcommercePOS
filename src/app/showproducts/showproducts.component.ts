@@ -89,10 +89,7 @@ export class ShowproductsComponent implements OnInit {
             
 
    this.cart.push(a);
-   console.log(this.cart[0]);
-   console.log(this.cart[1]);
-   console.log(this.cart[2]);
-   console.log(this.cart[3]); 
+   
 
    this.count = this.cart.length;
    console.log(this.count);
@@ -127,7 +124,16 @@ cartclick(){
 */
     var k= JSON.stringify(this.cart)
 
-     alert(k)
+    var txt;
+    var person = prompt(k, "email ID");
+    if (person == null || person == "") {
+        txt = "User cancelled the prompt.";
+    } else {
+        txt = "Hello " + person + "! How are you today?";
+    }
+  
+  console.log("User Input Text goes here"+txt)
+    
    
      
     

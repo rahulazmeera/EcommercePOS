@@ -17,6 +17,30 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { AdminComponent } from './admin/admin.component';
 import { AdditemsService } from './services/additems.service';
 import { HttpModule } from '@angular/http';
+import { RouterModule, Routes } from '@angular/router';
+import { SaleplaceComponent } from './saleplace/saleplace.component';
+import { AdditemsComponent } from './additems/additems.component';
+
+
+
+//routes
+
+const appRoutes: Routes = [
+ {
+    path:'products',
+    component: SaleplaceComponent
+ },
+ {
+   path:'',
+   component: SignupComponent
+ },
+ {
+   path:'superadmin',
+   component: AdditemsComponent
+ }
+];
+
+
 
 
 @NgModule({
@@ -26,14 +50,17 @@ import { HttpModule } from '@angular/http';
     ShowproductsComponent,
     SignupComponent,
     PricedetailsComponent,
-    AdminComponent
+    AdminComponent,
+    SaleplaceComponent,
+    AdditemsComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [AdditemsService],
   bootstrap: [AppComponent]

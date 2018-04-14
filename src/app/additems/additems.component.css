@@ -1,0 +1,20 @@
+.card{
+   
+    align-self: center;
+    background-image: url("https://onehdwallpaper.com/wp-content/uploads/2016/05/Beautiful-Apple-Fruit-Desktop-Backgorunds.jpg");
+    background-repeat: no-repeat;
+}
+
+
+.textbox{
+    font-size:12pt;
+    height:20px;
+    width:200px;
+}
+
+.order{
+    background-image: url("https://onehdwallpaper.com/wp-content/uploads/2016/05/Beautiful-Apple-Fruit-Desktop-Backgorunds.jpg");
+    background-repeat: no-repeat;
+    max-height: 100px;
+
+}

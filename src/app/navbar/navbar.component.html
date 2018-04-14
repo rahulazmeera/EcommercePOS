@@ -1,12 +1,12 @@
 
 <div  class="nav" >
   
-<mat-toolbar-row  >
+<mat-toolbar-row >
 
-<button mat-button class="dropbtn" fxFlex="31%" >MENU</button>
+<button mat-button class="dropbtn" fxFlex="31%" ><a [routerLink]="['products']" style="color:white" >Home</a></button>
 
 <div class="dropdown">
-    <button  mat-button class="dropbtn">CATEGORY</button>
+    <button  mat-button class="dropbtn">Category</button>
     <div class="dropdown-content">
       <a href="#">Food</a>
       <a href="#">Drinks</a>
@@ -14,7 +14,9 @@
     </div>
   </div>
 
-<button mat-button class="dropbtn" fxFlex="35%" >Signup/Login</button>
+<button mat-button class="dropbtn" fxFlex="35%" ><a [routerLink]="['']" style="color:white" >Signup/Login</a></button>
+
+<button class="dropbtn" mat-button> <a [routerLink]="['superadmin']" style="color:white" >SuperUser</a> </button>
 
 </mat-toolbar-row>
 </div>
