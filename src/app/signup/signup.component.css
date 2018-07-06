@@ -1,0 +1,54 @@
+.matsize{
+    width: 10cm;
+    height: 12cm;
+    margin-left: 35% ;
+    margin-top: 40px;
+    position: relative;
+    background-image: url("https://i.pinimg.com/originals/8f/e7/b5/8fe7b5ac83b0d95d5a420d8ba6f10482.jpg");
+}
+
+
+.login{
+    justify-content: space-around;
+    font-size: 30px;
+    background-color: transparent;
+    color: white;
+    text-decoration: underline black;
+}
+
+.form{
+    justify-content: flex-start;
+    color: white;
+    font-size: 13px;
+    text-align: start;
+   
+}
+
+.input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0, 0.6);
+    color: white;
+    font-size: 20px;
+}
+
+.signbutton{
+   background-color: rgb(13, 87, 87);
+   justify-content: space-around;
+   border-radius: 12px;
+   color: white;
+   width: 70%;
+   font-size: 20px;
+}
+
+.chkbox{
+    width: 10%;
+    color: white;
+    font-size: 15px;
+    box-align: left;
+}

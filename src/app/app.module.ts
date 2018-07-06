@@ -22,6 +22,9 @@ import { SaleplaceComponent } from './saleplace/saleplace.component';
 import { AdditemsComponent } from './additems/additems.component';
 
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginService } from './services/login.service';
+
 
 //routes
 
@@ -59,10 +62,12 @@ const appRoutes: Routes = [
     MaterialModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [AdditemsService],
+  providers: [AdditemsService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

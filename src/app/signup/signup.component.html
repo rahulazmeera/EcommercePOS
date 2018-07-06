@@ -1,10 +1,27 @@
-mat-card
-<h1>login</h1>
-<div>
-<input type="Username">
-<input type="Password">
+<mat-card class="matsize">
+<div >
+ <button mat-button fxFlex="50%" class="login">LOG IN</button> <button mat-button fxFlex="50%" class="login">SIGN UP</button>
 </div>
-<div>
-<button disabled="enabled">login</button>
-<button disabled="enabled">Signup</button>
+
+
+<div >
+<p class="form">USERNAME</p>
+<input  [(ngModel)]="UserName" class="input" size="50px" type="Username">
+<p class="form">PASSWORD</p>
+<input  class="input" type="Password" [(ngModel)]="PassWord" >
+
+<input type="checkbox" name="rememberme" id=""><label class="chkbox">Remember me</label>
+
 </div>
+
+
+
+
+<div >
+    <button mat-button  class="signbutton" (click)="Login();">SIGN IN</button>
+</div>
+
+
+<p style="color: white">forgot password !</p>
+
+</mat-card>
